@@ -4,8 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "dependencies": {
-    "grunt": "~0.4.5",
-    "jquery": null
+    "grunt": "~0.4.5"
   },
   "devDependencies": {
     "grunt-combine-media-queries": "^1.0.19",
