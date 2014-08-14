@@ -15,9 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": null,
-    "backbone-amd": null,
-    "requirejs":null,
-    "underscore-amd":null
+    "jquery": null
   }
 }
