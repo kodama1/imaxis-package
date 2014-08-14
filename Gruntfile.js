@@ -77,8 +77,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-mkdir');
 	grunt.loadNpmTasks('grunt-exec');
-	grunt.registerTask('default', ['mkdir', 'exec']);
-	grunt.registerTask('run', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
+	grunt.registerTask('init', ['mkdir', 'exec']);
+	grunt.registerTask('default', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
 
 
 }
