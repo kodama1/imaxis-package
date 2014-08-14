@@ -1,9 +1,9 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		pkg:grunt.file.readJSON('package.json'),
-	    execute: {
-	        target: {
-	            src: ['start_bower.js']
+	    shell: {
+	        dirListing: {
+	            command: 'bower init'
 	        }
 	    },
 		mkdir: {
@@ -76,8 +76,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-mkdir');
-	grunt.loadNpmTasks('grunt-execute');
-	grunt.registerTask('init', ['mkdir', 'execute']);
+	grunt.loadNpmTasks('grunt-shell');
+	grunt.registerTask('init', ['mkdir', 'shell']);
 	grunt.registerTask('default', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
 
 
