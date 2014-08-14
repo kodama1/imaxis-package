@@ -4,7 +4,7 @@ module.exports = function(grunt){
 		mkdir: {
 			all: {
 				options: {
-					create: ['tmp', 'test/very/deep/folder']
+					create: ['less', 'css', 'js']
 				},
 			},
 		},
@@ -70,7 +70,9 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-combine-media-queries');
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
+	grunt.loadNpmTasks('grunt-mkdir');
+	grunt.registerTask('default', ['mkdir']);
+	grunt.registerTask('run', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
 
 
 }
