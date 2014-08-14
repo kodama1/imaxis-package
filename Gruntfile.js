@@ -1,6 +1,13 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		pkg:grunt.file.readJSON('package.json'),
+		mkdir: {
+			all: {
+				options: {
+					create: ['tmp', 'test/very/deep/folder']
+				},
+			},
+		},
 		less:{
 			compile:{
 				files:{
