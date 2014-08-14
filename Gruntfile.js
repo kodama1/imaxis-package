@@ -1,6 +1,11 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		pkg:grunt.file.readJSON('package.json'),
+	  	exec: {
+			list_files: {
+			  cmd: 'bower init'
+			}
+		},
 		mkdir: {
 			all: {
 				options: {
@@ -71,7 +76,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-mkdir');
-	grunt.registerTask('default', ['mkdir']);
+	grunt.loadNpmTasks('grunt-exec');
+	grunt.registerTask('default', ['mkdir', 'exec']);
 	grunt.registerTask('run', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
 
 
