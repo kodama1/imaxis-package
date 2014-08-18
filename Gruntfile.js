@@ -71,7 +71,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-mkdir');
-	grunt.registerTask('init', 'Create Less, CSS and JS folders!' ['mkdir']);
+	grunt.registerTask('init', ['mkdir']);
 	grunt.registerTask('default', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
 
 
