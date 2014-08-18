@@ -4,14 +4,14 @@ module.exports = function(grunt){
 		mkdir: {
 			all: {
 				options: {
-					create: ['www', 'www/less', 'www/css', 'www/js']
+					create: ['../dist', '../dist/www', '../dist/www/less', '../dist/www/css', '../dist/www/js']
 				},
 			},
 		},
 		less: {
 		    default: {
 		        files: {
-		            "www/css/style.css": "www/less/style.less"
+		            "../dist/www/css/style.css": "../dist/www/less/style.less"
 		        },
 		        options:{
 		        	compress: true
@@ -24,16 +24,16 @@ module.exports = function(grunt){
 			},
 			your_target: {
 				files: {
-				'www/css/style.css': ['www/css/style.css']
+				'../dist/www/css/style.css': ['../dist/www/css/style.css']
 				}
 			}
 		},
 		cssmin: {
 			minify: {
 				expand: true,
-				cwd: 'www/css/',
+				cwd: '../dist/www/css/',
 				src: ['*.css', '!*.min.css'],
-				dest: 'www/css/',
+				dest: '../dist/www/css/',
 				ext: '.min.css'
 			}
 		},
@@ -41,9 +41,9 @@ module.exports = function(grunt){
 	     	default_options: {
 		       bsFiles: {
 		         src: [
-		           "www/css/*.css",
-		           "www/js/*.js",
-		           "www/*.html"
+		           "../dist/www/css/*.css",
+		           "../dist/www/js/*.js",
+		           "../dist/www/*.html"
 		         ]
 	       		},
 		       options: {
@@ -56,7 +56,7 @@ module.exports = function(grunt){
    		},
    		watch: {
 			less: {
-				files: "www/less/*.less",
+				files: "../dist/www/less/*.less",
 				tasks: [
 				 "less",
 				 "cssmin"
