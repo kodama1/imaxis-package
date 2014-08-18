@@ -6,43 +6,43 @@ module.exports = function(grunt){
 				options: {
 					create: ['www', 'www/less', 'www/css', 'www/js']
 				},
-			}
+			},
 		},
-		less:{
-			compile:{
-				files:{
-					'css/style.css' : 'less/style.less'
-				},
-				options:{
-					compress: true
-				}
-			}
+		less: {
+		    default: {
+		        files: {
+		            "www/css/style.css": "www/less/style.less"
+		        },
+		        options:{
+		        	compress: true
+		        }
+		    }
 		},
 		cmq: {
 			options: {
-			  log: false
+		  		log: false
 			},
 			your_target: {
-			  files: {
-			    'css/style.css': ['css/style.css']
-			  }
+				files: {
+				'www/css/style.css': ['www/css/style.css']
+				}
 			}
 		},
 		cssmin: {
-		  minify: {
-		    expand: true,
-		    cwd: 'css/',
-		    src: ['*.css', '!*.min.css'],
-		    dest: 'css/',
-		    ext: '.min.css'
-		  }
+			minify: {
+				expand: true,
+				cwd: 'www/css/',
+				src: ['*.css', '!*.min.css'],
+				dest: 'www/css/',
+				ext: '.min.css'
+			}
 		},
 		browserSync: {
 	     	default_options: {
 		       bsFiles: {
 		         src: [
-		           "css/*.css",
-		           "js/*.js",
+		           "www/css/*.css",
+		           "www/js/*.js",
 		           "*.html"
 		         ]
 	       		},
@@ -56,7 +56,7 @@ module.exports = function(grunt){
    		},
    		watch: {
 			less: {
-				files: "less/*.less",
+				files: "www/less/*.less",
 				tasks: [
 				 "less",
 				 "cssmin"
