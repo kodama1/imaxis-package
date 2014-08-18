@@ -4,14 +4,14 @@ module.exports = function(grunt){
 		mkdir: {
 			all: {
 				options: {
-					create: ['../dist', '../dist/www', '../dist/www/less', '../dist/www/css', '../dist/www/js']
+					create: ['/template', '/template/hbs', '/template/less', '../dist', '../dist/www', '../dist/www/css', '../dist/www/js']
 				},
 			},
 		},
 		less: {
 		    default: {
 		        files: {
-		            "../dist/www/css/style.css": "../dist/www/less/style.less"
+		            "../dist/www/css/style.css": "template/less/style.less"
 		        },
 		        options:{
 		        	compress: true
@@ -56,7 +56,7 @@ module.exports = function(grunt){
    		},
    		watch: {
 			less: {
-				files: "../dist/www/less/*.less",
+				files: "template/less/*.less",
 				tasks: [
 				 "less",
 				 "cssmin"
