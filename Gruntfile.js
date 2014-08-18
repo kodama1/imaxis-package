@@ -6,7 +6,7 @@ module.exports = function(grunt){
 				options: {
 					create: ['www', 'www/less', 'www/css', 'www/js']
 				},
-			},
+			}
 		},
 		less:{
 			compile:{
