@@ -2,18 +2,16 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg:grunt.file.readJSON('package.json'),
 		bower: {
-			install: {
-			  options: {
-			    targetDir: './lib',
-			    layout: 'byType',
-			    install: true,
-			    verbose: false,
-			    cleanTargetDir: false,
-			    cleanBowerDir: false,
-			    bowerOptions: {}
-			  }
-			}
-		},
+		  options: {
+		    targetDir: './lib',
+		    layout: 'byType',
+		    install: true,
+		    verbose: false,
+		    cleanTargetDir: false,
+		    cleanBowerDir: false,
+		    bowerOptions: {}
+		  }
+		}
 		mkdir: {
 			all: {
 				options: {
@@ -85,6 +83,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-mkdir');
 	grunt.loadNpmTasks('grunt-bower-task');
+	grunt.registerTask('installl', ['bower']);
 	grunt.registerTask('init', ['mkdir', 'shell']);
 	grunt.registerTask('default', ['less', 'cmq', 'cssmin', 'browserSync', 'watch']);
 
