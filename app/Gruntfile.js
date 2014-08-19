@@ -4,7 +4,7 @@ module.exports = function(grunt){
 		mkdir: {
 			all: {
 				options: {
-					create: ['/template', '/template/hbs', '/template/less', '../dist', '../dist/www', '../dist/www/css', '../dist/www/js']
+					create: ['template/', 'template/hbs', 'template/less', '../dist', '../dist/www', '../dist/www/css', '../dist/www/js']
 				},
 			},
 		},
