@@ -1,0 +1,33 @@
+{
+  "name": "GuiaDistrital",
+  "homepage": "imaxis.com.br",
+  "_release": "9629ab897f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9629ab897f62b0ce8f8f440bbc727fc44cfbe616"
+  },
+  "_source": "git://github.com/kodama1/PackagesImaxis.git",
+  "_target": "*",
+  "_originalSource": "pkg-imaxis",
+  "_direct": true,
+  "version": "0.0.0",
+  "authors": [
+    "marcuscaum <marcuslucas.jb@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "backbone-amd":null,
+    "underscore-amd":null,
+    "requirejs":null
+  }
+}
